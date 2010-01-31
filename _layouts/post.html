@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Scott Chacon on the Interwebs</title>
+		<link rel="stylesheet" type="text/css" href="/css/reset.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/text.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/grid.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/layout.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/nav.css" media="screen" />
+		
+		<style type="text/css">
+	  	  body { background: #aaa }
+	    </style>
+		
+		<!--[if IE 6]><link rel="stylesheet" type="text/css" href="/css/ie6.css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen" /><![endif]-->
+		<script type="text/javascript" src="http://use.typekit.com/kau4vup.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<script type="text/javascript" src="/js/jquery-1.4.1.min.js"></script>
+		<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+	</head>
+	<body>
+		<div class="container_12">
+			<div class="grid_12">
+				<span id="branding">Scott "Dragon" Chacon</span>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_12">
+				<span id="page-heading">Specialization is for Insects, so there</span>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_12">
+				<ul id="menu">
+					<li><a id="menu_home" href="/">Home</a></li>
+					<li><a id="menu_about" href="/#about">About</a></li>
+					<li><a id="menu_code" href="/#code">Code</a></li>
+					<li><a id="menu_scribbles" href="/#scribbles">Scribbles</a></li>
+					<li><a id="menu_talks" href="/#talks">Talks</a></li>
+					<li>&#167;</li>
+					<li><a href="http://github.com/schacon">GitHub</a></li>
+					<li><a href="http://twitter.com/chacon">Twitter</a></li>
+					<li><a href="http://www.linkedin.com/in/schacon">LinkedIn</a></li>
+					<li><a href="http://www.tripit.com/people/schacon">TripIt</a></li>
+					<li><a href="http://www.flickr.com/photos/chacon">Flickr</a></li>
+				</ul>
+			</div>
+
+			<div class="clear"></div>
+			<div class="grid_12"><br/></div>
+			<div class="clear"></div>
+
+			<div class="grid_12" id="info_box">
+				<div class="box">
+				<div class="article">
+				<h3>{{ page.title }}</h3>
+				<p class="meta">{{page.date | date_to_string}}</p>
+				{{ content }}
+				</div>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+		</div>
+	</body>
+</html>

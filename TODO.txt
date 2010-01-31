@@ -5,11 +5,7 @@ TODO
 * dynamic nickname change, list of nicknames
 * dynamic background change, list of backgrounds, processed bgs
 * scribbles
-  - recent scribble
-  - perma-scribbles
   - scribble search
-  - scribble nav
   - scribble comments
-  - feed
   - feedburner
   

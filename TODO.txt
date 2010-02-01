@@ -2,7 +2,6 @@ TODO
 ============
 
 * style code page
-* dynamic nickname change, list of nicknames
 * dynamic background change, list of backgrounds, processed bgs
 * scribbles
   - scribble search

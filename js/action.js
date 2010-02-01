@@ -2,6 +2,24 @@ jQuery.githubUser = function(username, callback) {
   jQuery.getJSON("http://github.com/api/v1/json/" + username + "?callback=?", callback);
 }
 
+var nicknames = ["Dragon", "Gizzard", "The Enforcer", 
+                 "Mizungu", "The Hammer"]
+var phrases = ["specialization is for insects, bitches",
+                "really, internet, this is the best you got?",
+                "if you leave this page, jeff atwood wins",
+                "i'll change your arity"]
+function changeBlurb() {
+  var phrase = phrases[Math.floor(Math.random()*phrases.length)]
+  $('#page-heading').text(phrase)
+  t=setTimeout("changeBlurb()",30000);
+}
+
+function changeNickname() {
+  var nickname = nicknames[Math.floor(Math.random()*nicknames.length)]
+  $('#nickname').text(nickname)
+  t=setTimeout("changeNickname()",30000);
+}
+
 function showHome() {
   $('#break').show()
   $('.non_home_box').hide('scale')
@@ -69,6 +87,7 @@ function hideAll() {
 }
 
 $(document).ready(function(){
+  changeBlurb()
   if(window.location.hash != "") {
     page = window.location.hash
     if(page == '#talks') {

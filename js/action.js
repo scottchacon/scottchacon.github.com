@@ -88,6 +88,7 @@ function hideAll() {
 
 $(document).ready(function(){
   changeBlurb()
+  changeNickname()
   if(window.location.hash != "") {
     page = window.location.hash
     if(page == '#talks') {

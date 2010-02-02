@@ -4,10 +4,13 @@ jQuery.githubUser = function(username, callback) {
 
 var nicknames = ["Dragon", "Gizzard", "The Enforcer", 
                  "Mizungu", "The Hammer"]
-var phrases = ["specialization is for insects, bitches",
+var phrases = ["also feels that specialization is for insects",
                 "really, internet, this is the best you got?",
-                "if you leave this page, jeff atwood wins",
-                "i'll change your arity"]
+                "every movie should have a cast dance scene at the end",
+                "honey, you're a tool of the masses",
+                "my life is kinda like the Matrix, really",
+                "too fat to fit into Japanese pants",
+                "it's like the finger of God!"]
 function changeBlurb() {
   var phrase = phrases[Math.floor(Math.random()*phrases.length)]
   $('#page-heading').text(phrase)

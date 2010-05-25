@@ -5,7 +5,7 @@ jQuery.githubUser = function(username, callback) {
 var nicknames = ["Dragon", "Gizzard", "The Enforcer", 
                  "Mizungu", "The Hammer"]
 var phrases = ["also feels that specialization is for insects",
-                "really, internet, this is the best you got?",
+                "my dogs named tater tooooo",
                 "every movie should have a cast dance scene at the end",
                 "honey, you're a tool of the masses",
                 "my life is kinda like the Matrix, really",

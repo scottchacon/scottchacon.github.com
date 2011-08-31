@@ -7,7 +7,7 @@ title: GitHub Flow
 
 I travel all over the place teaching Git to people and nearly every class and workshop I've done recently has asked me what I think about [git-flow](http://nvie.com/posts/a-successful-git-branching-model/).  I always answer that I think that it's great - it has taken a system (Git) that has a million possible workflows and documented a well tested, flexible workflow that works for lots of developers in a fairly straightforward manner.  It has become something of a standard so that developers can move between projects or companies and be familiar with this standardized workflow.
 
-However, it does have it's issues. I have heard a number of opinions from people along the lines of not liking that new feature branches are started off of `develop` rather than `master`, or the way it handles hotfixes, but those are fairly minor.
+However, it does have its issues. I have heard a number of opinions from people along the lines of not liking that new feature branches are started off of `develop` rather than `master`, or the way it handles hotfixes, but those are fairly minor.
 
 One of the bigger issues for me is that it's more complicated than I think most developers and development teams actually require. It's complicated enough that a big [helper script](https://github.com/nvie/gitflow) was developed to help enforce the flow.  Though this is cool, the issue is that it cannot be enforced in a Git GUI, only on the command line, so the only people who have to learn the complex workflow really well, because they have to do all the steps manually, are the same people who aren't comfortable with the system enough to use it from the command line.  This can be a huge problem.
 

@@ -1,3 +1,8 @@
+---
+layout: post
+title: GitHub Flow
+---
+
 ## Issues with git-flow ##
 
 I travel all over the place teaching Git to people and nearly every class and workshop I've done recently has asked me what I think about [git-flow](http://nvie.com/posts/a-successful-git-branching-model/).  I always answer that I think that it's great - it has taken a system (Git) that has a million possible workflows and documented a well tested, flexible workflow that works for lots of developers in a fairly straightforward manner.  It has become something of a standard so that developers can move between projects or companies and be familiar with this standardized workflow.

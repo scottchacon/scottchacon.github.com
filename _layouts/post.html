@@ -1,81 +1,35 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>Scott Chacon on the Interwebs</title>
-		<link rel="stylesheet" type="text/css" href="/css/reset.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="/css/text.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="/css/grid.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="/css/layout.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="/css/nav.css" media="screen" />
-		
-		<style type="text/css">
-      body { background: #aaa }
-      .article { font-size: 1.1em; vertical-align: 1.3em; }
-      .article h2 { margin-bottom: 10px }
-      .article h4 { margin-bottom: 20px; margin-top: 20px; }
-      .article pre { background: #eee; font-size: 0.8em; padding: 10px; }
-      .twitter { float: right; padding: 10px; background: #efe; border: 1px solid #585 }
-	  </style>
-		
-		<!--[if IE 6]><link rel="stylesheet" type="text/css" href="/css/ie6.css" media="screen" /><![endif]-->
-		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen" /><![endif]-->
-		<script type="text/javascript" src="/js/jquery-1.4.1.min.js"></script>
-		<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="/js/action.js"></script>
-	</head>
-	<body>
-		<div class="container_12">
-			<div class="grid_12">
-				<span id="branding">Scott &quot;<span id="nickname">Dragon</span>&quot; Chacon</span>
-			</div>
-			<div class="clear"></div>
-			<div class="grid_12">
-				<span id="page-heading">Specialization is for insects, bitches</span>
-			</div>
-			<div class="clear"></div>
-			<div class="grid_12">
-				<ul id="menu">
-					<li><a href="/">Home</a></li>
-					<li><a href="/#about">About</a></li>
-					<li><a href="/#code">Code</a></li>
-					<li><a href="/#scribbles">Scribbles</a></li>
-					<li><a href="/#talks">Talks</a></li>
-					<li>&#167;</li>
-					<li><a href="http://github.com/schacon">GitHub</a></li>
-					<li><a href="http://twitter.com/chacon">Twitter</a></li>
-					<li><a href="http://www.linkedin.com/in/schacon">LinkedIn</a></li>
-					<li><a href="http://www.tripit.com/people/schacon">TripIt</a></li>
-					<li><a href="http://www.flickr.com/photos/chacon">Flickr</a></li>
-				</ul>
-			</div>
+---
+layout: layout
+---
 
-			<div class="clear"></div>
-			<div class="grid_12"><br/></div>
-			<div class="clear"></div>
+<section class="content">
+  <h1>
+    <a href="{{ page.url }}">{{ page.title }}</a>
+  </h1>
 
-			<div class="grid_12" id="info_box">
-				<div class="box">
-				<div class="article">
-				<div class="twitter">Don't forget to <a href="http://twitter.com/chacon">follow @chacon</a></div>
-				<h3>{{ page.title }}</h3>
-				<p class="meta">{{page.date | date_to_string}}</p>
-				{{ content }}
-				<div class="twitter">Don't forget to <a href="http://twitter.com/chacon">follow @chacon</a></div>
-				</div>
-				</div>
-			</div>
+  <section class="byline">
+    {{ page.date | date: "%B %e, %Y" }}
+  </section>
 
-			<div class="clear"></div>
-		</div>
-  </body>
-  <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-    try {
-      var pageTracker = _gat._getTracker("UA-82337-17");
-      pageTracker._trackPageview();
-      } catch(err) {}</script>
-</html>
+  {{ content }}
+
+  <!-- TODO: bio here -->
+  <section class="meta">
+    <h3>Discussion, links, and tweets</h3>
+    <section class="copy">
+      <a href="https://twitter.com/{{ site.twitter }}" target="_blank">
+        <img src="{{ site.gravatar_url }}?s=142" height="50" width="50" />
+      </a>
+
+      <p>
+        I'm a developer at GitHub. <a href="https://twitter.com/{{ site.twitter }}" target="_blank">Follow me on Twitter</a>;
+        you'll enjoy my tweets. I take care to carefully craft each one. Or at least aim to make
+        you giggle. Or offended. One of those two&mdash; I haven't decided which yet.
+      </p>
+
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="{{ site.twitter }}">Tweet</a>
+      <a href="http://twitter.com/{{ site.twitter }}" class="twitter-follow-button" data-show-count="false">Follow @{{ site.twitter }}</a>
+      <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+    </section>
+  </section>
+</section>

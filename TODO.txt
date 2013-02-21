@@ -1,22 +1,14 @@
-TODO
-============
-
-* style code page
-* dynamic background change, list of backgrounds, processed bgs
-* scribbles
-  - scribble search
-  - scribble comments
-* travels/talks page - pics
-* filter rss feeds to categories
-
 Writing Ideas
 ===============
 
+* culture and startups
+  - first principles
+
+* git and workflows
+  - updated github flow
+
 * josie/life stories
-* github stuff
 * travel stories/pics
 * new projects (showoff, erlangit, etc)
-* movie reviews
-* economics / fed
 * politics / obama
-* book reviews
+* howtos when i find something difficult

@@ -11,7 +11,7 @@ However, it does have its issues. I have heard a number of opinions from people 
 
 One of the bigger issues for me is that it's more complicated than I think most developers and development teams actually require. It's complicated enough that a big [helper script](https://github.com/nvie/gitflow) was developed to help enforce the flow.  Though this is cool, the issue is that it cannot be enforced in a Git GUI, only on the command line, so the only people who have to learn the complex workflow really well, because they have to do all the steps manually, are the same people who aren't comfortable with the system enough to use it from the command line.  This can be a huge problem.
 
-Both of these issues can be solved easily just by having a much more simplified process. At GitHub, we do not use git-flow.  We use, and always have used, a much simpler Git workflow. 
+Both of these issues can be solved easily just by having a much more simplified process. At GitHub, we do not use git-flow.  We use, and always have used, a much simpler Git workflow.
 
 Its simplicity gives it a number of advantages.  One is that it's easy for people to understand, which means they can pick it up quickly and they rarely if ever mess it up or have to undo steps they did wrong. Another is that we don't need a wrapper script to help enforce it or follow it, so using GUIs and such are not a problem.
 
@@ -25,7 +25,7 @@ Another advantage of deploying all the time is the ability to quickly address is
 
 ### How We Do It ###
 
-So, what is GitHub Flow? 
+So, what is GitHub Flow?
 
 * Anything in the `master` branch is deployable
 * To work on something new, create a descriptively named branch off of `master` (ie: `new-oauth2-scopes`)
@@ -52,7 +52,8 @@ When you want to start work on anything, you create a descriptively named branch
 
 This is nice because when we go to the GitHub branch list page we can easily see what branches have been worked on recently and roughly how much work they have on them.  
 
-![github branch list](https://img.skitch.com/20110831-x5nyqid885aqnp7t2au5ckw929.png)
+![github branch list](https://cloud.githubusercontent.com/assets/70/6769774/7988902c-d0a8-11e4-94c9-dc132461ffe4.png)
+
 
 It's almost like a list of upcoming features with current rough status. This page is awesome if you're not using it - it only shows you branches that have unique work on them relative to your currently selected branch and it sorts them so that the ones most recently worked on are at the top. If I get really curious, I can click on the 'Compare' button to see what the actual unified diff and commit list is that is unique to that branch.
 
@@ -91,11 +92,13 @@ GitHub has an amazing code review system called [Pull Requests](http://help.gith
 
 Actually, we use it more as a branch conversation view more than a pull request. You can send pull requests from one branch to another in a single project (public or private) in GitHub, so you can use them to say "I need help or review on this" in addition to "Please merge this in".
 
-![early pr message](https://img.skitch.com/20110831-1mft7b5nbxrcghasbi9hkbs84s.png)
+![early pr message](https://cloud.githubusercontent.com/assets/70/6769770/61a2dcba-d0a8-11e4-9924-3576232053ee.png)
+
 
 Here you can see Josh cc'ing Brian for review and Brian coming in with some advice on one of the lines of code.  Further down we can see Josh acknowledging Brian's concerns and pushing more code to address them.
 
-![more discussion](https://img.skitch.com/20110831-j181q96hh7k8x2e1iuh38jsc8a.png)
+![more discussion](https://cloud.githubusercontent.com/assets/70/6769767/5054b4ba-d0a8-11e4-8d38-548ecf157018.png)
+
 
 Finally you can see that we're still in the trial phase - this is not a deployment ready branch yet, we use the Pull Requests to review the code long before we actually want to merge it into `master` for deployment.
 
@@ -106,7 +109,7 @@ It also let you continue to push to the branch, so if someone comments that you 
 
 If the branch has been open for too long and you feel it's getting out of sync with the master branch, you can merge master into your topic branch and keep going.  You can easily see in the pull request discussion or commit list when the branch was last brought up to date with the 'master'.
 
-![master merge](https://img.skitch.com/20110831-q5dwhwk3dut7mdqm2kp7qwqu67.png)
+![master merge](https://cloud.githubusercontent.com/assets/70/6769754/2162f69e-d0a8-11e4-8c98-d2bb581f7152.png)
 
 When everything is really and truly done on the branch and you feel it's ready to deploy, you can move on to the next step.
 
@@ -114,7 +117,8 @@ When everything is really and truly done on the branch and you feel it's ready t
 
 We don't simply do work directly on `master` or work on a topic branch and merge it in when we think it's done - we try to get signoff from someone else in the company.  This is generally a +1 or emoji or ":shipit:" comment, but we try to get someone else to look at it.
 
-![shipit comment](https://img.skitch.com/20110831-8gg3uhb14adjis43wa6swiinik.png)
+![shipit comment](https://cloud.githubusercontent.com/assets/70/6769753/0ea37c4a-d0a8-11e4-8b61-7aa73b7e3b03.png)
+
 
 Once we get that, and the branch passes CI, we can merge it into master for deployment, which will automatically close the Pull Request when we push it.
 
@@ -128,7 +132,7 @@ Our campfire bot, hubot, can do deployments for any of the employees, so a simpl
 
 will deploy the code and zero-downtime restart all the necessary processes. You can see how common this is at GitHub:
 
-![our campfire logs](https://img.skitch.com/20110831-jcmx5qktw5beabq7q1rcpj1k6c.png)
+![our campfire logs](https://cloud.githubusercontent.com/assets/70/6769750/ebc7b3da-d0a7-11e4-96e3-cfe0cea6ae51.png)
 
 You can see 6 different people (including a support guy and a designer) deploying about 24 times in one day.
 
@@ -143,4 +147,3 @@ Git itself is fairly complex to understand, making the workflow that you use wit
 For teams that have to do formal releases on a longer term interval (a few weeks to a few months between releases), and be able to do hot-fixes and maintenance branches and other things that arise from shipping so infrequently, [git-flow](http://nvie.com/posts/a-successful-git-branching-model/) makes sense and I would highly advocate it's use.
 
 For teams that have set up a culture of shipping, who push to production every day, who are constantly testing and deploying, I would advocate picking something simpler like GitHub Flow.
-

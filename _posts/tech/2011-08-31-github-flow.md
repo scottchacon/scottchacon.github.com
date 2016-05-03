@@ -63,7 +63,7 @@ So, as of this writing, we have 44 branches in our repository with unmerged work
 
 Another big difference from git-flow is that we push to named branches on the server constantly.  Since the only thing we really have to worry about is `master` from a deployment standpoint, pushing to the server doesn't mess anyone up or confuse things - everything that is not `master` is simply something being worked on.
 
-It also make sure that our work is always backed up in case of laptop loss or hard drive failure. More importantly, it puts everyone in constant communication.  A simple 'git fetch' will basically give you a TODO list of what every is currently working on.
+It also makes sure that our work is always backed up in case of laptop loss or hard drive failure. More importantly, it puts everyone in constant communication.  A simple 'git fetch' will basically give you a TODO list of what everyone is currently working on.
 
     $ git fetch
     remote: Counting objects: 3032, done.

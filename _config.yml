@@ -1,8 +1,5 @@
-markdown: rdiscount
 pygments: true
 auto: true
-rdiscount:
-  extensions: [smart]
 
 name: Scott Chacon
 url: http://scottchacon.com
@@ -11,4 +8,3 @@ twitter: chacon
 github: schacon
 instagram: schacon
 gravatar_url: http://gravatar.com/avatar/9375a9529679f1b42b567a640d775e7d
-
